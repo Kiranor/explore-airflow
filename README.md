@@ -54,10 +54,10 @@ docker-compose up -d
 
 Необходимо запустить:
 
-1) [main.py](handles/clickhouse/main.py) из папки [clickhouse](handles/clickhouse)
-2) [main.py](handles/oltp_source/main.py) из папки [oltp_source](handles/oltp_source)
-3) [main.py](handles/oltp_target/main.py) из папки [oltp_target](handles/oltp_target)
-4) [main.py](handles/airflow/main.py) из папки [airflow](handles/airflow)
+1) [main.py](setup_utils/clickhouse/main.py) из папки [clickhouse](setup_utils/clickhouse)
+2) [main.py](setup_utils/oltp_source/main.py) из папки [oltp_source](setup_utils/oltp_source)
+3) [main.py](setup_utils/oltp_target/main.py) из папки [oltp_target](setup_utils/oltp_target)
+4) [main.py](setup_utils/airflow/main.py) из папки [airflow](setup_utils/airflow)
 
 Логика расчёта ранга в таблице `dds.user_ltv_history`:
 
@@ -73,7 +73,7 @@ docker-compose up -d
 
 ### Порядок запуска DAG
 
-В целом, нет разницы очереди запуска DAG. Но рекомендуется такая последовательность:
+Запустить в следующей последовательности:
 
 1) [users_to_ch.py](dags/users_to_ch.py)
 2) [sales_to_ch.py](dags/sales_to_ch.py)

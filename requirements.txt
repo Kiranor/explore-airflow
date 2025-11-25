@@ -1,0 +1,7 @@
+requests~=2.32.5
+pendulum~=3.1.0
+apache-airflow == 2.10.4
+airflow_clickhouse_plugin
+clickhouse-driver~=0.2.10
+SQLAlchemy~=1.4.54
+pandas
